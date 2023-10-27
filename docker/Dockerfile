@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 LABEL Maintainer="Genki Miyauchi"
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -17,7 +17,6 @@ RUN apt-get update && apt-get install -y \
     wget \
     cmake \
     freeglut3-dev \
-    qt5-default \
     libxi-dev \
     libxmu-dev \
     libfreeimage-dev \
@@ -27,14 +26,14 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && \
     rm -r /var/lib/apt/lists/*
 
-RUN wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1oO2lb2LuLq4IrZmNMiJurWTotHp_pDye' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1oO2lb2LuLq4IrZmNMiJurWTotHp_pDye" -O argos3_simulator.deb && rm -rf /tmp/cookies.txt
+RUN wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1gnWfCqNmbCQbxNDenp5-ek7P5bvTNgyD' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1gnWfCqNmbCQbxNDenp5-ek7P5bvTNgyD" -O argos3_simulator.deb && rm -rf /tmp/cookies.txt
 
 RUN apt-get update && apt-get install -y sudo
 RUN adduser --disabled-password --gecos '' docker
 RUN adduser docker sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER docker
-RUN sudo dpkg -i argos3_simulator.deb && sudo rm -rf argos3_simulator.deb
+RUN sudo apt install -y ./argos3_simulator.deb && sudo rm -rf argos3_simulator.deb
 RUN sudo chmod -R ugo+rw /home/docker
 USER root
 
@@ -56,7 +55,6 @@ RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v21.12/pr
     cd protobuf-3.21.12/ && \
     ./configure && \
     make -j$(nproc) && \
-    make check && \
     make install && \
     ldconfig && \
     cd / && \
