@@ -1,5 +1,7 @@
 # Multi-Human Swarm Control
 
+![screenrecord](https://gitlab.com/genki_miyauchi/multi-human-swarm-control/-/wikis/uploads/52f4b6fd30ddee915c32070af8f8149d/screenrecord.gif)
+
 [**Citation**](#citation) | [**Docker image**](#docker-image) | [**Installation**](#installation) | [**Usage**](#usage)
 
 This repository contains the code for the paper:
