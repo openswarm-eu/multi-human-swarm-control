@@ -2,7 +2,7 @@
 
 ![screenrecord](https://gitlab.com/genki_miyauchi/multi-human-swarm-control/-/wikis/uploads/52f4b6fd30ddee915c32070af8f8149d/screenrecord.gif)
 
-[**Citation**](#citation) | [**Docker image**](#docker-image) | [**Installation**](#installation) | [**Usage**](#usage)
+[**Citation**](#citation) | [**Docker image**](#docker-image) | [**Installation**](#installation) | [**Usage**](#usage) | [**License**](#license)
 
 This repository contains the code for the paper:
 - [Sharing the Control of Robot Swarms Among Multiple Human Operators: A User Study](TO-BE-UPDATED)
@@ -16,7 +16,7 @@ Watch the presentation video of the paper.
 
 # Citation
 
-If you use this repository in your research. **cite** it using:
+If you use this repository in your research, **cite** it using:
 
 ```
 @inproceedings{miyauchi2023Sharing,
@@ -100,7 +100,7 @@ make -j$(nproc)
 make install
 ldconfig
 ```
-If the protobuf compiler successfully installed, you should be able to run ```protoc``` in the terminal.
+Once the protobuf compiler is successfully installed, you should be able to run ```protoc``` in the terminal.
 
 ### Python dependencies
 
@@ -111,8 +111,6 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-
-
 
 # Usage
 
@@ -129,7 +127,7 @@ make
 
 ### Run the project
 
-Use the following commands to run the experiment:
+Use the following command to run the experiment:
 
 ```bash
 python3 src/web_app/app.py
@@ -139,5 +137,5 @@ This hosts the main page at to access the rest of the experiments.
 Open a web browser and access ```localhost:5000```.
 The app has been tested on Chromium. There are known issues in Firefox.
 
-<!-- # License
-For open source projects, say how it is licensed. -->
+# License
+The code in this repository is released under the terms of the MIT license.
