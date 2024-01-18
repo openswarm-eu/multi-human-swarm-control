@@ -98,7 +98,7 @@ cd protobuf-3.21.12/
 ./configure
 make -j$(nproc)
 sudo make install
-ldconfig
+sudo ldconfig
 ```
 Once the protobuf compiler is successfully installed, you should be able to run ```protoc``` in the terminal.
 
