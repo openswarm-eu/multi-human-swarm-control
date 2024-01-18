@@ -97,7 +97,7 @@ tar xzf protobuf-cpp-3.21.12.tar.gz
 cd protobuf-3.21.12/
 ./configure
 make -j$(nproc)
-make install
+sudo make install
 ldconfig
 ```
 Once the protobuf compiler is successfully installed, you should be able to run ```protoc``` in the terminal.
