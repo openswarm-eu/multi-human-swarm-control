@@ -5,7 +5,7 @@
 [**Citation**](#citation) | [**Docker image**](#docker-image) | [**Installation**](#installation) | [**Usage**](#usage) | [**License**](#license)
 
 This repository contains the code for the paper:
-- [Sharing the Control of Robot Swarms Among Multiple Human Operators: A User Study](TO-BE-UPDATED)
+- [Sharing the Control of Robot Swarms Among Multiple Human Operators: A User Study](https://eprints.whiterose.ac.uk/202313/1/IROS23_1687_FI.pdf)
 
 Watch the presentation video of the paper.
 
@@ -24,7 +24,7 @@ If you use this repository in your research, **cite** it using:
   booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
   title = {Sharing the Control of Robot Swarms Among Multiple Human Operators: A User Study}, 
   year = {2023},
-  pages = {TO-BE-UPDATED}
+  pages = {8847-8853}
 ```
 
 # Docker image
